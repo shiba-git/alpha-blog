@@ -16,7 +16,8 @@ Rails.application.routes.draw do
   
   root 'pages#home'
   get 'about', to: 'pages#about'
-
+  get 'signup', to: 'users#new'
+  resources :users, except: [:new]
   # Example resource route with options:
   #   resources :products do
   #     member do
